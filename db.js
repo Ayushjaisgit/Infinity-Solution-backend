@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
+require("dotenv").config();
 mongoose.set("strictQuery", false);
 
+const DATABASE = process.env.DATABASE
 
-const mongoURI = "mongodb://localhost:27017/infinitySoul?tls=false&readPreference=primary&directConnection=true"
-
+console.log(DATABASE)
 
 const connectToMongo = ()=>{
-    mongoose.connect(mongoURI, ()=>{
+    mongoose.connect(DATABASE, ()=>{
         console.log("connected to mongo successfully");
     })
 }
