@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 connectToMongo()
 
 const app = express()
-const port = process.env.port || 5001
+const port = process.env.PORT || 5001
 
 app.use(cors())
 app.use(cookieParser())
