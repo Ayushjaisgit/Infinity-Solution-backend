@@ -4,6 +4,7 @@ const JWT_SECRET = 'This is a string'
 
     
 const fetchuser= (req, res, next)=>{
+    // const s = ''
     // geting the user from jwt token and add id to req object
 const token = req.headers.authorization
 const token2 = token.split(' ')[1]
@@ -16,5 +17,6 @@ const token2 = token.split(' ')[1]
     } catch (error) {
         res.status(401).send({error:"please Authenticate using valid token"})
     }  
+
 }
 module.exports = fetchuser;

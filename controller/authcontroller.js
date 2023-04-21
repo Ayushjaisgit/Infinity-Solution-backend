@@ -12,9 +12,6 @@ const JWT_SECRET = 'This is a string'
 
 const CustomerRequest = require('../models/CustomerRequest');
 
-
-
-
 ////////////////////////////////////////////////Sign Up Endpoint for users only////////////////////////////////////////////////////
 
 const createUser =  async (req, res) => {
@@ -232,7 +229,6 @@ const allocatedTasks =  async(req, res) => {
   }else{
     res.send(task)
   }
-  
   // res.render('/allocated-tasks');
 }
 const employeeList =  async(req, res) => {
