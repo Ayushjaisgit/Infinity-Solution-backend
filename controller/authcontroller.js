@@ -250,7 +250,7 @@ const unallocatedTasks = async (req, res) => {
   if(!status){
     res.json(err)
   }else{
-    res.status(200).send("You have no tasks available right now")
+    res.status(200).send(status)
   } 
 }
 const editunallocatedTasks = async (req, res) => {

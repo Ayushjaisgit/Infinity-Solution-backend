@@ -65,6 +65,9 @@ router.patch('/unallocated-tasks/assign/:taskId' ,fetchuser, onController.editun
 // allocated tasks
 // get allocated tasks 
 router.get('/allocated-tasks', fetchuser, onController.allocatedTasks);
+router.get('/servertime',  (req,res) =>{
+  res.status(200).send('date =>' + Date.now())
+});
 
 // get employee list to assign
 router.get('/employee/list', fetchuser, onController.employeeList);
