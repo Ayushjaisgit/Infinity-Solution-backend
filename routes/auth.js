@@ -57,7 +57,7 @@ try {
 ////////////////////////////////////////////////////////////// Super Admin Section ///////////////////////////////////////////////////////////
 // unallocated tasks
 // Route 1 get unallocated tasks
-router.get('/unallocated-tasks',fetchuser, onController.unallocatedTasks);
+router.get('/unallocated-tasks', onController.unallocatedTasks);
 
 // handle assign task
 // Route 2 assign task to employee

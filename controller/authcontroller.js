@@ -236,8 +236,7 @@ const allocatedTasks =  async(req, res) => {
   // res.render('/allocated-tasks');
 }
 const employeeList =  async(req, res) => {
-  const task = await User.find({userType:"Employee"});
-
+  const task = await User.find({userType:"Employee"});  
   if(!task){
     res.json(err)
   }else{
@@ -251,7 +250,7 @@ const unallocatedTasks = async (req, res) => {
   if(!status){
     res.json(err)
   }else{
-    res.send(status)
+    res.status(200).send("You have no tasks available right now")
   } 
 }
 const editunallocatedTasks = async (req, res) => {
